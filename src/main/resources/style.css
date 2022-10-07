@@ -1,0 +1,234 @@
+.root-pane {
+    -fx-background-color: #E4E6EB;
+}
+
+.drag-bar {
+    -fx-background-color: #464849;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 12, 0.5, 0.0, 0.0);
+}
+
+.split-pane {
+    -fx-background-color: transparent;
+}
+.split-pane > .split-pane-divider {
+    -fx-background-color: rgb(136, 136, 136);
+    -fx-padding: 1.5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0.0, 0.0);
+}
+
+.image-entry {
+    -fx-background-color: #6f7072;
+    -fx-border-color: #6f7072;
+    -fx-border-width: 3;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+.ie-selected {
+    -fx-background-color: #999a9d;
+    -fx-border-color: #999a9d;
+}
+/* private static final String[] colors = {"#fc0303", "#fc9d03", "#b5fc03", "#00ffe5", "#1500ff", "#dd00ff"}; */
+.ie-a {
+    -fx-border-color: #55A1FF;
+}
+.ie-b {
+    -fx-border-color: #FFC861;
+}
+.ie-c {
+    -fx-border-color: #FFAB61;
+}
+.ie-d {
+    -fx-border-color: #179184;
+}
+.ie-e {
+    -fx-border-color: #3c2de5;
+}
+.ie-f {
+    -fx-border-color: #ab2ac0;
+}
+
+.rect-blank {
+    -fx-background-color: transparent;
+}
+.rect-a {
+    -fx-background-color: #55A1FF;
+}
+.rect-b {
+    -fx-background-color: #FFC861;
+}
+.rect-c {
+    -fx-background-color: #FFAB61;
+}
+.rect-d {
+    -fx-background-color: #15bba9;
+}
+.rect-e {
+    -fx-background-color: #2919d3;
+}
+.rect-f {
+    -fx-background-color: #a517bd;
+}
+.rect-a:hover {
+    -fx-background-color: #71acf6;
+}
+.rect-b:hover {
+    -fx-background-color: #fad183;
+}
+.rect-c:hover {
+    -fx-background-color: #f8bb83;
+}
+.rect-d:hover {
+    -fx-background-color: #49efde;
+}
+.rect-e:hover {
+    -fx-background-color: #6357ee;
+}
+.rect-f:hover {
+    -fx-background-color: #ba35d0;
+}
+
+.reset-button {
+    -fx-background-color: #717477;
+    -fx-background-radius: 13;
+    -fx-background-insets: 5;
+}
+.reset-button:hover {
+    -fx-background-color: #878b8f;
+}
+.reset-button:pressed {
+    -fx-background-color: #a2a6a9;
+}
+
+.text-field {
+    -fx-background-color: #717477;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-family: "Impact";
+}
+
+.combo-box {
+    -fx-background-color: #717477;
+    -fx-background-radius: 8;
+}
+.combo-box:hover {
+    -fx-background-color: #828588;
+}
+.combo-box .list-view {
+    -fx-background-color: #717477;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+    -fx-font-family: "Impact";
+}
+.combo-box .cell {
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+    -fx-font-family: "Impact";
+}
+.combo-box .arrow {
+    -fx-background-color: #c7c7c7;
+}
+.combo-box-popup .list-view .list-cell {
+    -fx-padding: 4 0 4 5;
+    -fx-background-color: #717477;
+    -fx-text-fill: white;
+}
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #9da0a4;
+}
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #9da0a4;
+}
+
+.settings-pane {
+    -fx-background-color: #505254;
+    -fx-background-insets: 0;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0.0, 0.0);
+}
+
+.bar-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+    -fx-background-insets: 2;
+}
+.bar-button:hover {
+    -fx-background-color: #535556;
+}
+.bar-button:pressed {
+    -fx-background-color: #707273;
+}
+
+.slider-pane {
+    -fx-background-color: #464849;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0.0, 0.0);
+}
+.slider .track {
+    -fx-background-color: #717477;
+}
+.slider .thumb {
+    -fx-background-color: #999da1;
+}
+.slider .thumb:hover {
+    -fx-background-color: #b2b7bb;
+}
+.slider .thumb:pressed {
+    -fx-background-color: #c9ced2;
+}
+
+.save-button {
+    -fx-background-color: #464849;
+    -fx-background-radius: 5;
+    -fx-background-insets: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0.0, 0.0);
+}
+.save-button:hover {
+    -fx-background-color: #EC4949FF;
+}
+.save-button:pressed {
+    -fx-background-color: #ea6565;
+}
+
+.explorer {
+    -fx-background-color: #626364;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #707073;
+    -fx-background-radius: 5em;
+}
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #7c7c80;
+}
+.scroll-bar:horizontal .thumb:pressed,
+.scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: #a2a2a4;
+}

@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.12'
+    id 'org.beryx.jlink' version '2.25.0'
+}
+
+group 'com.volt4.shotstacker'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    modules = [ 'javafx.controls','javafx.fxml' ]
+}
+
+jlink {
+    launcher {
+        name = 'Michael\'s Shot Stacker'
+    }
+    jpackage {
+        imageOptions += ['--icon', 'src/main/resources/images/icon.icns']
+    }
+}
+
+application {
+    mainClassName('org.volt4.shotstacker.ShotStackerApplication')
+    mainModule.set('org.volt4.shotstacker')
+}
+
+dependencies {
+
+}

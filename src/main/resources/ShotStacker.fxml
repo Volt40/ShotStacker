@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="root-pane" type="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="53.0" layoutY="29.0" onMouseDragged="#onDragBarDragged" onMousePressed="#onDragBarPressed" prefHeight="30.0" prefWidth="200.0" styleClass="drag-bar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="2.5" AnchorPane.topAnchor="2.5">
+               <image>
+                  <Image url="@images/icon.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="71.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0.0, 0.0);" text="Michael's Super Awesome Shot Stacker" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="4.0">
+               <font>
+                  <Font name="Impact" size="18.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="471.0" layoutY="-86.0" onMouseClicked="#onClose" onMouseDragged="#onCloseDragged" onMousePressed="#onClosePressed" prefHeight="200.0" prefWidth="30.0" styleClass="bar-button" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="-85.0" layoutY="-61.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <image>
+                        <Image url="@images/close.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="409.0" layoutY="-85.0" onMouseClicked="#onMinimize" onMouseDragged="#onMinimizeDragged" onMousePressed="#onMinimizePressed" prefHeight="200.0" prefWidth="30.0" styleClass="bar-button" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="-86.0" layoutY="-60.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="2.5" AnchorPane.topAnchor="2.5">
+                     <image>
+                        <Image url="@images/minus.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="667.0" layoutY="8.0" text="V1.0" textAlignment="CENTER" textFill="#b4b4b4" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="7.0">
+               <font>
+                  <Font name="Menlo Regular" size="13.0" />
+               </font>
+            </Label>
+            <Button layoutX="389.0" layoutY="2.0" maxWidth="-Infinity" mnemonicParsing="false" opacity="0.001" prefHeight="0.5" prefWidth="0.5" text="Button">
+               <padding>
+                  <Insets bottom="-17.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </AnchorPane>
+      <SplitPane fx:id="split" dividerPositions="0.285" layoutX="190.0" layoutY="151.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+        <items>
+            <AnchorPane onMouseClicked="#onBackClicked" prefHeight="200.0" prefWidth="200.0" styleClass="explorer">
+               <children>
+                  <ScrollPane fx:id="scrollPane" prefHeight="468.0" prefWidth="397.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <AnchorPane fx:id="explorer" prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </ScrollPane>
+                  <HBox fx:id="importHint" alignment="CENTER" prefHeight="472.0" prefWidth="401.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="Command + I" textFill="#999999">
+                           <font>
+                              <Font name="PT Mono Bold" size="11.0" />
+                           </font>
+                           <padding>
+                              <Insets top="1.0" />
+                           </padding>
+                        </Label>
+                        <Label text="to import images." textFill="#999999">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane prefHeight="50.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <children>
+                        <VBox prefHeight="55.0" prefWidth="528.0" styleClass="settings-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="20.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Dimensions" textFill="WHITE">
+                                             <font>
+                                                <Font name="Impact" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="3.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Aspect Ratio" textFill="WHITE">
+                                             <font>
+                                                <Font name="Impact" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="3.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Resolution" textFill="WHITE">
+                                             <font>
+                                                <Font name="Impact" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="3.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="53.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="30.0" prefWidth="200.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="dimensions1" alignment="CENTER" text="3" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="1.5" top="1.5" />
+                                             </padding>
+                                          </TextField>
+                                          <Label text="x" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="Impact" size="13.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets bottom="2.0" left="3.0" right="3.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="dimensions2" alignment="CENTER" text="1">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="1.5" top="1.5" />
+                                             </padding>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <Separator opacity="0.28" orientation="VERTICAL" prefHeight="200.0">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" top="-15.0" />
+                                       </HBox.margin>
+                                    </Separator>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="aspectRatio1" alignment="CENTER" text="3" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="1.5" top="1.5" />
+                                             </padding>
+                                          </TextField>
+                                          <Label text=":" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font name="Impact" size="13.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets bottom="2.0" left="3.0" right="3.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="aspectRatio2" alignment="CENTER" text="2.39">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="1.5" top="1.5" />
+                                             </padding>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <Separator opacity="0.28" orientation="VERTICAL" prefHeight="200.0">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" top="-15.0" />
+                                       </HBox.margin>
+                                    </Separator>
+                                    <AnchorPane maxHeight="-Infinity" prefHeight="30.0" prefWidth="200.0">
+                                       <children>
+                                          <ComboBox fx:id="resolution" maxHeight="-Infinity" prefHeight="20.0" promptText="Resolution" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+                                             <padding>
+                                                <Insets bottom="-3.0" top="-3.0" />
+                                             </padding>
+                                          </ComboBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <Separator opacity="0.28" orientation="VERTICAL" prefHeight="200.0">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" right="50.0" top="-15.0" />
+                                       </HBox.margin>
+                                    </Separator>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <AnchorPane onMouseClicked="#onReset" prefHeight="200.0" prefWidth="50.0" styleClass="reset-button" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="12.5" AnchorPane.topAnchor="12.5">
+                                 <image>
+                                    <Image url="@images/reset.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="image" layoutX="90.0" layoutY="119.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="64.0">
+                     <children>
+                        <StackPane layoutX="102.0" layoutY="63.0" prefHeight="407.0" prefWidth="371.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fx:id="preview" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </VBox>
+                              <AnchorPane fx:id="overlay" prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="slider-pane" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="3.0" top="2.0" />
+                           </HBox.margin>
+                           <children>
+                              <Slider fx:id="slider" layoutX="40.0" layoutY="5.0" max="1.0" value="0.5" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                        <Button mnemonicParsing="false" onAction="#onSaveImage" prefHeight="30.0" prefWidth="150.0" styleClass="save-button" text="Save Image" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Impact" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+         <padding>
+            <Insets bottom="-2.0" left="-3.0" right="-2.0" />
+         </padding>
+      </SplitPane>
+   </children>
+</fx:root>
